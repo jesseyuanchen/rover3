@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60EBE32E16293EE00052B514 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32D16293EE00052B514 /* UIKit.framework */; };
+		60EBE33016293EE00052B514 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32F16293EE00052B514 /* Foundation.framework */; };
+		60EBE33216293EE00052B514 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE33116293EE00052B514 /* CoreGraphics.framework */; };
+		60EBE33416293EE00052B514 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE33316293EE00052B514 /* CoreData.framework */; };
+		60EBE33A16293EE00052B514 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60EBE33816293EE00052B514 /* InfoPlist.strings */; };
+		60EBE33C16293EE00052B514 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE33B16293EE00052B514 /* main.m */; };
+		60EBE34016293EE00052B514 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE33F16293EE00052B514 /* AppDelegate.m */; };
+		60EBE34316293EE00052B514 /* rover3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE34116293EE00052B514 /* rover3.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60EBE32916293EE00052B514 /* rover3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rover3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60EBE32D16293EE00052B514 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60EBE32F16293EE00052B514 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60EBE33116293EE00052B514 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60EBE33316293EE00052B514 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		60EBE33716293EE00052B514 /* rover3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rover3-Info.plist"; sourceTree = "<group>"; };
+		60EBE33916293EE00052B514 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60EBE33B16293EE00052B514 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60EBE33D16293EE00052B514 /* rover3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rover3-Prefix.pch"; sourceTree = "<group>"; };
+		60EBE33E16293EE00052B514 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		60EBE33F16293EE00052B514 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		60EBE34216293EE00052B514 /* rover3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rover3.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60EBE32616293EE00052B514 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EBE32E16293EE00052B514 /* UIKit.framework in Frameworks */,
+				60EBE33016293EE00052B514 /* Foundation.framework in Frameworks */,
+				60EBE33216293EE00052B514 /* CoreGraphics.framework in Frameworks */,
+				60EBE33416293EE00052B514 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60EBE31E16293EE00052B514 = {
+			isa = PBXGroup;
+			children = (
+				60EBE33516293EE00052B514 /* rover3 */,
+				60EBE32C16293EE00052B514 /* Frameworks */,
+				60EBE32A16293EE00052B514 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60EBE32A16293EE00052B514 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60EBE32916293EE00052B514 /* rover3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60EBE32C16293EE00052B514 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60EBE32D16293EE00052B514 /* UIKit.framework */,
+				60EBE32F16293EE00052B514 /* Foundation.framework */,
+				60EBE33116293EE00052B514 /* CoreGraphics.framework */,
+				60EBE33316293EE00052B514 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60EBE33516293EE00052B514 /* rover3 */ = {
+			isa = PBXGroup;
+			children = (
+				60EBE33E16293EE00052B514 /* AppDelegate.h */,
+				60EBE33F16293EE00052B514 /* AppDelegate.m */,
+				60EBE34116293EE00052B514 /* rover3.xcdatamodeld */,
+				60EBE33616293EE00052B514 /* Supporting Files */,
+			);
+			path = rover3;
+			sourceTree = "<group>";
+		};
+		60EBE33616293EE00052B514 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60EBE33716293EE00052B514 /* rover3-Info.plist */,
+				60EBE33816293EE00052B514 /* InfoPlist.strings */,
+				60EBE33B16293EE00052B514 /* main.m */,
+				60EBE33D16293EE00052B514 /* rover3-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60EBE32816293EE00052B514 /* rover3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60EBE34616293EE00052B514 /* Build configuration list for PBXNativeTarget "rover3" */;
+			buildPhases = (
+				60EBE32516293EE00052B514 /* Sources */,
+				60EBE32616293EE00052B514 /* Frameworks */,
+				60EBE32716293EE00052B514 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rover3;
+			productName = rover3;
+			productReference = 60EBE32916293EE00052B514 /* rover3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60EBE32016293EE00052B514 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jesse Chen";
+			};
+			buildConfigurationList = 60EBE32316293EE00052B514 /* Build configuration list for PBXProject "rover3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60EBE31E16293EE00052B514;
+			productRefGroup = 60EBE32A16293EE00052B514 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60EBE32816293EE00052B514 /* rover3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60EBE32716293EE00052B514 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EBE33A16293EE00052B514 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60EBE32516293EE00052B514 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EBE33C16293EE00052B514 /* main.m in Sources */,
+				60EBE34016293EE00052B514 /* AppDelegate.m in Sources */,
+				60EBE34316293EE00052B514 /* rover3.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60EBE33816293EE00052B514 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60EBE33916293EE00052B514 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60EBE34416293EE00052B514 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		60EBE34516293EE00052B514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60EBE34716293EE00052B514 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rover3/rover3-Prefix.pch";
+				INFOPLIST_FILE = "rover3/rover3-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60EBE34816293EE00052B514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rover3/rover3-Prefix.pch";
+				INFOPLIST_FILE = "rover3/rover3-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60EBE32316293EE00052B514 /* Build configuration list for PBXProject "rover3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60EBE34416293EE00052B514 /* Debug */,
+				60EBE34516293EE00052B514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60EBE34616293EE00052B514 /* Build configuration list for PBXNativeTarget "rover3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60EBE34716293EE00052B514 /* Debug */,
+				60EBE34816293EE00052B514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		60EBE34116293EE00052B514 /* rover3.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				60EBE34216293EE00052B514 /* rover3.xcdatamodel */,
+			);
+			currentVersion = 60EBE34216293EE00052B514 /* rover3.xcdatamodel */;
+			path = rover3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 60EBE32016293EE00052B514 /* Project object */;
+}
