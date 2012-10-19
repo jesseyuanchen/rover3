@@ -26,7 +26,9 @@
 
 + (NSArray *) getPlaces:(NSString *)keyword {
     
-    NSString *str = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?key=AIzaSyC-na2wu6vvWzJLq53UgErCcJ7AWzaAijs&location=42.369967,-71.117572&rankby=distance&sensor=false&keyword=food"];
+    float latitude = 42.369967;
+    float longitude = -71.117572;
+    NSString *str = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?key=AIzaSyC-na2wu6vvWzJLq53UgErCcJ7AWzaAijs&location=%f,%f&rankby=distance&sensor=false&keyword=%@", latitude, longitude, keyword];
     
     NSURL *url = [[NSURL alloc] initWithString:str];
     NSString *fileContent= [NSString stringWithContentsOfURL:url encoding:NSStringEncodingConversionAllowLossy error:nil];
