@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlacesModelViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
