@@ -10,7 +10,7 @@
 #import "PlacesModelViewController.h"
 #import "DetailedViewController.h"
 
-@interface ListViewController : UITableViewController
+@interface ListViewController : UITableViewController <UISearchBarDelegate>
 
 @property NSMutableArray *results;
 @property UISearchBar *keywordField;
