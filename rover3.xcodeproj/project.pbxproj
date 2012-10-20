@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6024FD8B16327273002933ED /* Placemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 6024FD8A16327273002933ED /* Placemark.m */; };
 		60334261163238E700DC2213 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6033425F163238E700DC2213 /* MapViewController.m */; };
 		60334262163238E700DC2213 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60334260163238E700DC2213 /* MapViewController.xib */; };
 		6033427116323A2300DC2213 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6033426F16323A2300DC2213 /* ListViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6024FD8916327273002933ED /* Placemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Placemark.h; sourceTree = "<group>"; };
+		6024FD8A16327273002933ED /* Placemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Placemark.m; sourceTree = "<group>"; };
 		6033425E163238E700DC2213 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		6033425F163238E700DC2213 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		60334260163238E700DC2213 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				6033427516323A4200DC2213 /* FavoritesViewController.xib */,
 				E0D3DC1B1631E7EF0008A612 /* PlacesModelViewController.h */,
 				E0D3DC1C1631E7F00008A612 /* PlacesModelViewController.m */,
+				6024FD8916327273002933ED /* Placemark.h */,
+				6024FD8A16327273002933ED /* Placemark.m */,
 				60EBE34116293EE00052B514 /* rover3.xcdatamodeld */,
 				60EBE33616293EE00052B514 /* Supporting Files */,
 			);
@@ -332,6 +337,7 @@
 				6033427616323A4200DC2213 /* FavoritesViewController.m in Sources */,
 				603342871632513000DC2213 /* Favorites.m in Sources */,
 				E01F9D5B16326F1200294237 /* DetailedViewController.m in Sources */,
+				6024FD8B16327273002933ED /* Placemark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

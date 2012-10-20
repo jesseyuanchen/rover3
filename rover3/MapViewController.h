@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Placemark.h"
+#import "PlacesModelViewController.h"
 
 @interface MapViewController : UIViewController
 
