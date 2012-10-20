@@ -14,6 +14,8 @@
 
 @implementation DetailedViewController
 
+@synthesize data = _data;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -25,6 +27,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"%@", [self.data objectForKey:@"name"]);
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

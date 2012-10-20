@@ -10,4 +10,6 @@
 
 @interface DetailedViewController : UIViewController
 
+@property NSDictionary *data;
+
 @end

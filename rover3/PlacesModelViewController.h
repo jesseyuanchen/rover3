@@ -10,7 +10,9 @@
 #import "SBJson.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface PlacesModelViewController : UIViewController
+@interface PlacesModelViewController : UIViewController {
+
+}
 
 + (NSMutableArray *) getPlaces:(NSString *)keyword;
 

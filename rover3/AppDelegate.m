@@ -21,8 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray *data = [PlacesModelViewController getPlaces:@"food"];
-    NSLog(@"Raw json: %@", [[data objectAtIndex:1] valueForKey:@"name"]);
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

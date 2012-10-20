@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PlacesModelViewController.h"
+#import "DetailedViewController.h"
 
 @interface ListViewController : UITableViewController
 

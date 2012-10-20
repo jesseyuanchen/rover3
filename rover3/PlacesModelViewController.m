@@ -27,7 +27,10 @@
 + (NSMutableArray *) getPlaces:(NSString *)keyword {
     
     CLLocationManager *man = [[CLLocationManager alloc] init];
+    man.desiredAccuracy = kCLLocationAccuracyBest;
+    man.distanceFilter = kCLDistanceFilterNone;
     [man startUpdatingLocation];
+    CLLocation *loc = man.location;
     
     float latitude, longitude;
     if (man == nil) {
@@ -36,8 +39,9 @@
         NSLog(@"fail");
     }
     else {
-        latitude = man.location.coordinate.latitude;
-        longitude = man.location.coordinate.longitude;
+        latitude = [[man location] coordinate].latitude;
+        longitude = [[man location] coordinate].longitude;
+        NSLog(@"yay! lat: %@", loc);
     }
     
     NSString *str = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?key=AIzaSyC-na2wu6vvWzJLq53UgErCcJ7AWzaAijs&location=%f,%f&rankby=distance&sensor=false&keyword=%@", latitude, longitude, keyword];

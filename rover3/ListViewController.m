@@ -35,8 +35,10 @@
 - (void)viewDidLoad
 {
     
-    UISearchBar *search = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 45)];
-    [self.view addSubview:search];
+    UISearchBar *search = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    self.tableView.tableHeaderView = search;
+    
+    NSLog(@"\n%@", [PlacesModelViewController getPlaces:@"food"]);
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -85,7 +87,7 @@
 - (void)searchPlaces:(NSString *)keyword {
     
     self.results = [PlacesModelViewController getPlaces:keyword];
-    [self reloadInputViews];
+    [self.tableView reloadData];
 }
 
 /*
@@ -132,12 +134,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
+    DetailedViewController *detailedViewController = [[DetailedViewController alloc] init];
+    detailedViewController.data = [self.results objectAtIndex:indexPath.row];
+    
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailedViewController animated:YES];
+    
 }
 
 @end
