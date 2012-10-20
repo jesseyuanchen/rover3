@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "AppDelegate.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSDictionary *data;
+
++ (void)setAnnotation:(NSDictionary *)annotation;
 
 @end
