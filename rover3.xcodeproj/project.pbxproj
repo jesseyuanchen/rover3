@@ -20,6 +20,7 @@
 		6033427F16323B5400DC2213 /* starIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6033427B16323B5400DC2213 /* starIcon.png */; };
 		6033428316324E0D00DC2213 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6033428216324E0D00DC2213 /* MapKit.framework */; };
 		603342871632513000DC2213 /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = 603342861632513000DC2213 /* Favorites.m */; };
+		604E763416328E27004BA4AF /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604E763316328E27004BA4AF /* DetailedViewController.xib */; };
 		60EBE32E16293EE00052B514 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32D16293EE00052B514 /* UIKit.framework */; };
 		60EBE33016293EE00052B514 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32F16293EE00052B514 /* Foundation.framework */; };
 		60EBE33216293EE00052B514 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE33116293EE00052B514 /* CoreGraphics.framework */; };
@@ -64,6 +65,7 @@
 		6033428216324E0D00DC2213 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		603342851632513000DC2213 /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorites.h; sourceTree = "<group>"; };
 		603342861632513000DC2213 /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorites.m; sourceTree = "<group>"; };
+		604E763316328E27004BA4AF /* DetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedViewController.xib; sourceTree = "<group>"; };
 		60EBE32916293EE00052B514 /* rover3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rover3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EBE32D16293EE00052B514 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60EBE32F16293EE00052B514 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -188,6 +190,7 @@
 				6033427016323A2300DC2213 /* ListViewController.xib */,
 				E01F9D5916326F1200294237 /* DetailedViewController.h */,
 				E01F9D5A16326F1200294237 /* DetailedViewController.m */,
+				604E763316328E27004BA4AF /* DetailedViewController.xib */,
 				6033425E163238E700DC2213 /* MapViewController.h */,
 				6033425F163238E700DC2213 /* MapViewController.m */,
 				60334260163238E700DC2213 /* MapViewController.xib */,
@@ -306,6 +309,7 @@
 				6033427D16323B5400DC2213 /* macbookIcon.png in Resources */,
 				6033427E16323B5400DC2213 /* mapIcon.png in Resources */,
 				6033427F16323B5400DC2213 /* starIcon.png in Resources */,
+				604E763416328E27004BA4AF /* DetailedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

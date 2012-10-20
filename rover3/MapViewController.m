@@ -27,6 +27,7 @@
 {
     // create mapView
     MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
+    mapView.delegate = self;
     
     // center coordinate and span
     MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(42.371343, -71.11682), MKCoordinateSpanMake(0.01, 0.01));
@@ -46,14 +47,42 @@
         
         // new pin
         Placemark *pin = [[Placemark alloc] initWithCoordinate: CLLocationCoordinate2DMake(latitude, longitude)];
-        // pin.title = (NSString *)[[data objectAtIndex:i] objectForKey:@"name"];
-        pin.title = @"hi";
+        // pin.title = [[data objectAtIndex:i] objectForKey:@"name"];
+        pin.title = @"Work in Progress";
         [mapView addAnnotation:pin];
+        
     }
     // add pins
     
     [self.view addSubview:mapView];
     [super viewDidLoad];
+}
+- (MKAnnotationView *)mapView:(MKMapView *)sender viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
+    MKPinAnnotationView* pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+    pinView.animatesDrop = YES;
+    pinView.canShowCallout = YES;
+    UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton setTitle:annotation.title forState:UIControlStateNormal];
+    [rightButton addTarget:self 
+                    action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+    pinView.rightCalloutAccessoryView = rightButton;
+    return pinView;
+}
+
+-(void)showDetails:(id)sender
+{
+    NSLog(@"hi");
+    DetailedViewController *details = [[DetailedViewController alloc] initWithNibName:@"DetailedViewController" bundle:nil];
+    details.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self.navigationController pushViewController:details animated:YES];
+}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view 
+calloutAccessoryControlTapped:(UIControl *)control
+{
+
 }
 
 - (void)didReceiveMemoryWarning
