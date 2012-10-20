@@ -84,6 +84,7 @@ calloutAccessoryControlTapped:(UIControl *)control
     Placemark *pin = view.annotation;
     DetailViewController *detailView = [[DetailViewController alloc] init];
     detailView.data = pin.data;
+    [DetailViewController setAnnotation:pin.data];
     detailView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self.navigationController pushViewController:detailView animated:YES];
 }

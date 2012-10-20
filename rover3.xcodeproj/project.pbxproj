@@ -20,6 +20,8 @@
 		6033427F16323B5400DC2213 /* starIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6033427B16323B5400DC2213 /* starIcon.png */; };
 		6033428316324E0D00DC2213 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6033428216324E0D00DC2213 /* MapKit.framework */; };
 		603342871632513000DC2213 /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = 603342861632513000DC2213 /* Favorites.m */; };
+		6058565C16330D7200DB08B6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6058565A16330D7200DB08B6 /* DetailViewController.xib */; };
+		6058565F16330DB600DB08B6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6058565E16330DB600DB08B6 /* DetailViewController.m */; };
 		60EBE32E16293EE00052B514 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32D16293EE00052B514 /* UIKit.framework */; };
 		60EBE33016293EE00052B514 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32F16293EE00052B514 /* Foundation.framework */; };
 		60EBE33216293EE00052B514 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE33116293EE00052B514 /* CoreGraphics.framework */; };
@@ -28,7 +30,6 @@
 		60EBE33C16293EE00052B514 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE33B16293EE00052B514 /* main.m */; };
 		60EBE34016293EE00052B514 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE33F16293EE00052B514 /* AppDelegate.m */; };
 		60EBE34316293EE00052B514 /* rover3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE34116293EE00052B514 /* rover3.xcdatamodeld */; };
-		E01F9D7F16329D9800294237 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F9D7E16329D9800294237 /* DetailViewController.m */; };
 		E0D3DC091631D4B90008A612 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D3DBF11631D4B90008A612 /* NSObject+SBJson.m */; };
 		E0D3DC0A1631D4B90008A612 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D3DBF41631D4B90008A612 /* SBJsonParser.m */; };
 		E0D3DC0B1631D4B90008A612 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D3DBF61631D4B90008A612 /* SBJsonStreamParser.m */; };
@@ -64,6 +65,9 @@
 		6033428216324E0D00DC2213 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		603342851632513000DC2213 /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorites.h; sourceTree = "<group>"; };
 		603342861632513000DC2213 /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorites.m; sourceTree = "<group>"; };
+		6058565816330D7200DB08B6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6058565A16330D7200DB08B6 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		6058565E16330DB600DB08B6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		60EBE32916293EE00052B514 /* rover3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rover3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EBE32D16293EE00052B514 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60EBE32F16293EE00052B514 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,8 +80,6 @@
 		60EBE33E16293EE00052B514 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60EBE33F16293EE00052B514 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		60EBE34216293EE00052B514 /* rover3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rover3.xcdatamodel; sourceTree = "<group>"; };
-		E01F9D7D16329D9800294237 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		E01F9D7E16329D9800294237 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		E0D3DBF01631D4B90008A612 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJson.h"; path = "Classes/NSObject+SBJson.h"; sourceTree = "<group>"; };
 		E0D3DBF11631D4B90008A612 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJson.m"; path = "Classes/NSObject+SBJson.m"; sourceTree = "<group>"; };
 		E0D3DBF21631D4B90008A612 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJson.h; path = Classes/SBJson.h; sourceTree = "<group>"; };
@@ -186,8 +188,9 @@
 				6033426E16323A2300DC2213 /* ListViewController.h */,
 				6033426F16323A2300DC2213 /* ListViewController.m */,
 				6033427016323A2300DC2213 /* ListViewController.xib */,
-				E01F9D7D16329D9800294237 /* DetailViewController.h */,
-				E01F9D7E16329D9800294237 /* DetailViewController.m */,
+				6058565816330D7200DB08B6 /* DetailViewController.h */,
+				6058565E16330DB600DB08B6 /* DetailViewController.m */,
+				6058565A16330D7200DB08B6 /* DetailViewController.xib */,
 				6033425E163238E700DC2213 /* MapViewController.h */,
 				6033425F163238E700DC2213 /* MapViewController.m */,
 				60334260163238E700DC2213 /* MapViewController.xib */,
@@ -306,6 +309,7 @@
 				6033427D16323B5400DC2213 /* macbookIcon.png in Resources */,
 				6033427E16323B5400DC2213 /* mapIcon.png in Resources */,
 				6033427F16323B5400DC2213 /* starIcon.png in Resources */,
+				6058565C16330D7200DB08B6 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +341,7 @@
 				6033427616323A4200DC2213 /* FavoritesViewController.m in Sources */,
 				603342871632513000DC2213 /* Favorites.m in Sources */,
 				6024FD8B16327273002933ED /* Placemark.m in Sources */,
-				E01F9D7F16329D9800294237 /* DetailViewController.m in Sources */,
+				6058565F16330DB600DB08B6 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
