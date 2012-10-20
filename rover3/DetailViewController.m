@@ -1,20 +1,18 @@
 //
-//  DetailedViewController.m
+//  DetailViewController.m
 //  rover3
 //
 //  Created by Deborah Alves on 10/20/12.
 //  Copyright (c) 2012 Jesse Chen. All rights reserved.
 //
 
-#import "DetailedViewController.h"
+#import "DetailViewController.h"
 
-@interface DetailedViewController ()
+@interface DetailViewController ()
 
 @end
 
-@implementation DetailedViewController
-
-@synthesize data = _data;
+@implementation DetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +25,7 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"%@", [self.data objectForKey:@"name"]);
+     NSLog(@"%@", [self.data objectForKey:@"name"]);
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

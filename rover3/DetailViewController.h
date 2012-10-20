@@ -1,5 +1,5 @@
 //
-//  DetailedViewController.h
+//  DetailViewController.h
 //  rover3
 //
 //  Created by Deborah Alves on 10/20/12.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailedViewController : UIViewController
+@interface DetailViewController : UIViewController
 
-@property NSDictionary *data;
+@property (nonatomic, strong) NSDictionary *data;
 
 @end

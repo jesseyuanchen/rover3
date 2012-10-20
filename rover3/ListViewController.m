@@ -15,7 +15,6 @@
 @implementation ListViewController
 
 @synthesize results = _results;
-@synthesize keywordField = _keywordField;
 @synthesize keyword = _keyword;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -145,7 +144,7 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     
-    DetailedViewController *detailedViewController = [[DetailedViewController alloc] init];
+    DetailViewController *detailedViewController = [[DetailViewController alloc] init];
     detailedViewController.data = [self.results objectAtIndex:indexPath.row];
     
     // Pass the selected object to the new view controller.

@@ -11,8 +11,8 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Placemark.h"
-#import "PlacesModelViewController.h"
-#import "DetailedViewController.h"
+#import "ListViewController.h"
+#import "DetailViewController.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 

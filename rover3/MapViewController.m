@@ -33,6 +33,7 @@
     MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(42.371343, -71.11682), MKCoordinateSpanMake(0.01, 0.01));
     mapView.region = region;
     
+    
     NSArray *data = [PlacesModelViewController getPlaces:@"food"];
     for (int i = 1; i < [data count]; i++) {
         NSDictionary *location = [data objectAtIndex:i];
@@ -48,7 +49,9 @@
         // new pin
         Placemark *pin = [[Placemark alloc] initWithCoordinate: CLLocationCoordinate2DMake(latitude, longitude)];
         // pin.title = [[data objectAtIndex:i] objectForKey:@"name"];
-        pin.title = @"Work in Progress";
+        //SLog(@"%@\n", [[data objectAtIndex:i] objectForKey:@"name"]);
+        pin.title = [NSString stringWithFormat:@"%@", [[data objectAtIndex:i] objectForKey:@"name"]];
+        //pin.title = @"Work in Progress";
         [mapView addAnnotation:pin];
         
     }
@@ -71,12 +74,13 @@
     return pinView;
 }
 
--(void)showDetails:(id)sender
+- (void)showDetails:(id)sender
 {
     NSLog(@"hi");
-    DetailedViewController *details = [[DetailedViewController alloc] initWithNibName:@"DetailedViewController" bundle:nil];
+    DetailViewController *details = [[DetailViewController alloc] init];
     details.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self.navigationController pushViewController:details animated:YES];
+    [self presentViewController:details animated:YES completion:^{}];
+    //[self.navigationController pushViewController:details animated:YES];
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view 
