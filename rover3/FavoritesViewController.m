@@ -19,6 +19,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.title = NSLocalizedString(@"Favorites", @"Favorites");
     }
     return self;
 }
@@ -32,6 +33,35 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // TODO:
+    
+    // load the favorites database from core data
+    // store items in array
+    // make sure that items are printed out in the tableview and that the linking is correct
+}
+
+- (void)loadFavorites
+{
+    // RENAME VARS
+    // database schema
+    NSManagedObjectContext *context = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    // retrieve set of objects
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    // specify which entities we would like
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"Favorites" inManagedObjectContext:context];
+    [request setEntity:description];
+    
+    // order results
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    // handle fetching
+    NSFetchedResultsController *fetchController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
+    fetchController.delegate = self;
+    
+    // TODO:
+    // array = fetchController.fetchedObjects;
 }
 
 - (void)didReceiveMemoryWarning

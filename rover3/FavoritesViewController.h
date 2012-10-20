@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface FavoritesViewController : UITableViewController
+@interface FavoritesViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @end

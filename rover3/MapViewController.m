@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = NSLocalizedString(@"Map", @"Map");
     }
     return self;
 }
@@ -27,6 +28,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // create mapView
+    MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
+    
+    // center coordinate and span
+    MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(42.373078, -71.117578), MKCoordinateSpanMake(0.01, 0.01));
+    mapView.region = region;
+    
+    // add pins
+    
+    [self.view addSubview:mapView];
 }
 
 - (void)didReceiveMemoryWarning
