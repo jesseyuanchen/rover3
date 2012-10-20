@@ -23,22 +23,37 @@
     }
     return self;
 }
-
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
     // create mapView
     MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
     
     // center coordinate and span
-    MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(42.373078, -71.117578), MKCoordinateSpanMake(0.01, 0.01));
+    MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(42.371343, -71.11682), MKCoordinateSpanMake(0.01, 0.01));
     mapView.region = region;
     
+    NSArray *data = [PlacesModelViewController getPlaces:@"food"];
+    for (int i = 1; i < [data count]; i++) {
+        NSDictionary *location = [data objectAtIndex:i];
+        NSDictionary *geo = [[location objectForKey:@"geometry"] objectForKey:@"location"];
+        
+        NSNumber *lat = [geo objectForKey:@"lat"];
+        NSNumber *lng = [geo objectForKey:@"lng"];
+        
+        // convert to double
+        double latitude = [lat doubleValue];
+        double longitude = [lng doubleValue];
+        
+        // new pin
+        Placemark *pin = [[Placemark alloc] initWithCoordinate: CLLocationCoordinate2DMake(latitude, longitude)];
+        // pin.title = (NSString *)[[data objectAtIndex:i] objectForKey:@"name"];
+        pin.title = @"hi";
+        [mapView addAnnotation:pin];
+    }
     // add pins
     
     [self.view addSubview:mapView];
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning
