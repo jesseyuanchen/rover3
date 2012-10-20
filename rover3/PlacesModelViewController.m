@@ -26,8 +26,7 @@
 }
 
 - (NSMutableArray *) getPlaces:(NSString *)keyword {
-    
-    /*
+     /*
     // gets current location - not working
     self.man = [[CLLocationManager alloc] init];
     self.man.delegate = self;
@@ -47,8 +46,8 @@
         latitude = [loc coordinate].latitude;
         longitude = [loc coordinate].longitude;
         NSLog(@"yay!  %@", loc);
-    }
-    */
+    }*/
+    
     
     // hardcoding location instead :(
     float latitude, longitude;
@@ -71,11 +70,6 @@
 - (void)viewDidLoad
 {
     
-    self.man = [[CLLocationManager alloc] init];
-    self.man.delegate = self;
-    self.man.desiredAccuracy = kCLLocationAccuracyBest;
-    self.man.distanceFilter = kCLDistanceFilterNone;
-    [self.man startUpdatingLocation];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
