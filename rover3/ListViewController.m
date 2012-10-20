@@ -14,18 +14,29 @@
 
 @implementation ListViewController
 
+@synthesize results = _results;
+@synthesize keywordField = _keywordField;
+@synthesize keyword = _keyword;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
         self.tabBarItem.image = [UIImage imageNamed:@"macbookIcon.png"];
+        
+        // initialize empty results
+        self.results = [NSMutableArray array];
+        
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    
+    UISearchBar *search = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 45)];
+    [self.view addSubview:search];
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -50,16 +61,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.results count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,8 +77,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
+    cell.textLabel.text = [[self.results objectAtIndex:indexPath.row] valueForKey:@"name"];
     
     return cell;
+}
+
+- (void)searchPlaces:(NSString *)keyword {
+    
+    self.results = [PlacesModelViewController getPlaces:keyword];
+    [self reloadInputViews];
 }
 
 /*

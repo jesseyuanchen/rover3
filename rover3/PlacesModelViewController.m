@@ -24,10 +24,22 @@
     return self;
 }
 
-+ (NSArray *) getPlaces:(NSString *)keyword {
++ (NSMutableArray *) getPlaces:(NSString *)keyword {
     
-    float latitude = 42.369967;
-    float longitude = -71.117572;
+    CLLocationManager *man = [[CLLocationManager alloc] init];
+    [man startUpdatingLocation];
+    
+    float latitude, longitude;
+    if (man == nil) {
+        latitude = 42.369967;
+        longitude = -71.117572;
+        NSLog(@"fail");
+    }
+    else {
+        latitude = man.location.coordinate.latitude;
+        longitude = man.location.coordinate.longitude;
+    }
+    
     NSString *str = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?key=AIzaSyC-na2wu6vvWzJLq53UgErCcJ7AWzaAijs&location=%f,%f&rankby=distance&sensor=false&keyword=%@", latitude, longitude, keyword];
     
     NSURL *url = [[NSURL alloc] initWithString:str];

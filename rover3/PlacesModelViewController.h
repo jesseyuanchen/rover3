@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SBJson.h"
-
+#import <CoreLocation/CoreLocation.h>
 
 @interface PlacesModelViewController : UIViewController
 
-+ (NSArray *) getPlaces:(NSString *)keyword;
++ (NSMutableArray *) getPlaces:(NSString *)keyword;
 
 
 @end

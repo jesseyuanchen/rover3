@@ -27,6 +27,7 @@
 		60EBE33C16293EE00052B514 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE33B16293EE00052B514 /* main.m */; };
 		60EBE34016293EE00052B514 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE33F16293EE00052B514 /* AppDelegate.m */; };
 		60EBE34316293EE00052B514 /* rover3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE34116293EE00052B514 /* rover3.xcdatamodeld */; };
+		E01F9D5B16326F1200294237 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F9D5A16326F1200294237 /* DetailedViewController.m */; };
 		E0D3DC091631D4B90008A612 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D3DBF11631D4B90008A612 /* NSObject+SBJson.m */; };
 		E0D3DC0A1631D4B90008A612 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D3DBF41631D4B90008A612 /* SBJsonParser.m */; };
 		E0D3DC0B1631D4B90008A612 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D3DBF61631D4B90008A612 /* SBJsonStreamParser.m */; };
@@ -72,6 +73,8 @@
 		60EBE33E16293EE00052B514 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60EBE33F16293EE00052B514 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		60EBE34216293EE00052B514 /* rover3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rover3.xcdatamodel; sourceTree = "<group>"; };
+		E01F9D5916326F1200294237 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		E01F9D5A16326F1200294237 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 		E0D3DBF01631D4B90008A612 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJson.h"; path = "Classes/NSObject+SBJson.h"; sourceTree = "<group>"; };
 		E0D3DBF11631D4B90008A612 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJson.m"; path = "Classes/NSObject+SBJson.m"; sourceTree = "<group>"; };
 		E0D3DBF21631D4B90008A612 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJson.h; path = Classes/SBJson.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				6033426E16323A2300DC2213 /* ListViewController.h */,
 				6033426F16323A2300DC2213 /* ListViewController.m */,
 				6033427016323A2300DC2213 /* ListViewController.xib */,
+				E01F9D5916326F1200294237 /* DetailedViewController.h */,
+				E01F9D5A16326F1200294237 /* DetailedViewController.m */,
 				6033425E163238E700DC2213 /* MapViewController.h */,
 				6033425F163238E700DC2213 /* MapViewController.m */,
 				60334260163238E700DC2213 /* MapViewController.xib */,
@@ -326,6 +331,7 @@
 				6033427116323A2300DC2213 /* ListViewController.m in Sources */,
 				6033427616323A4200DC2213 /* FavoritesViewController.m in Sources */,
 				603342871632513000DC2213 /* Favorites.m in Sources */,
+				E01F9D5B16326F1200294237 /* DetailedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
