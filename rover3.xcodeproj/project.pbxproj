@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60334261163238E700DC2213 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6033425F163238E700DC2213 /* MapViewController.m */; };
+		60334262163238E700DC2213 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60334260163238E700DC2213 /* MapViewController.xib */; };
+		6033427116323A2300DC2213 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6033426F16323A2300DC2213 /* ListViewController.m */; };
+		6033427216323A2300DC2213 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6033427016323A2300DC2213 /* ListViewController.xib */; };
+		6033427616323A4200DC2213 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6033427416323A4200DC2213 /* FavoritesViewController.m */; };
+		6033427716323A4200DC2213 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6033427516323A4200DC2213 /* FavoritesViewController.xib */; };
+		6033427C16323B5400DC2213 /* groupIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6033427816323B5400DC2213 /* groupIcon.png */; };
+		6033427D16323B5400DC2213 /* macbookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6033427916323B5400DC2213 /* macbookIcon.png */; };
+		6033427E16323B5400DC2213 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6033427A16323B5400DC2213 /* mapIcon.png */; };
+		6033427F16323B5400DC2213 /* starIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6033427B16323B5400DC2213 /* starIcon.png */; };
 		60EBE32E16293EE00052B514 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32D16293EE00052B514 /* UIKit.framework */; };
 		60EBE33016293EE00052B514 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE32F16293EE00052B514 /* Foundation.framework */; };
 		60EBE33216293EE00052B514 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EBE33116293EE00052B514 /* CoreGraphics.framework */; };
@@ -32,6 +42,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6033425E163238E700DC2213 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6033425F163238E700DC2213 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		60334260163238E700DC2213 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		6033426E16323A2300DC2213 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		6033426F16323A2300DC2213 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		6033427016323A2300DC2213 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		6033427316323A4200DC2213 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		6033427416323A4200DC2213 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		6033427516323A4200DC2213 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		6033427816323B5400DC2213 /* groupIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groupIcon.png; path = images/groupIcon.png; sourceTree = "<group>"; };
+		6033427916323B5400DC2213 /* macbookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = macbookIcon.png; path = images/macbookIcon.png; sourceTree = "<group>"; };
+		6033427A16323B5400DC2213 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mapIcon.png; path = images/mapIcon.png; sourceTree = "<group>"; };
+		6033427B16323B5400DC2213 /* starIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starIcon.png; path = images/starIcon.png; sourceTree = "<group>"; };
 		60EBE32916293EE00052B514 /* rover3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rover3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EBE32D16293EE00052B514 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60EBE32F16293EE00052B514 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +113,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6033428116323B7000DC2213 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6033427816323B5400DC2213 /* groupIcon.png */,
+				6033427916323B5400DC2213 /* macbookIcon.png */,
+				6033427A16323B5400DC2213 /* mapIcon.png */,
+				6033427B16323B5400DC2213 /* starIcon.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		60EBE31E16293EE00052B514 = {
 			isa = PBXGroup;
 			children = (
@@ -122,9 +156,19 @@
 		60EBE33516293EE00052B514 /* rover3 */ = {
 			isa = PBXGroup;
 			children = (
+				6033428116323B7000DC2213 /* images */,
 				E0D3DC151631DFB00008A612 /* SBJson */,
 				60EBE33E16293EE00052B514 /* AppDelegate.h */,
 				60EBE33F16293EE00052B514 /* AppDelegate.m */,
+				6033426E16323A2300DC2213 /* ListViewController.h */,
+				6033426F16323A2300DC2213 /* ListViewController.m */,
+				6033427016323A2300DC2213 /* ListViewController.xib */,
+				6033425E163238E700DC2213 /* MapViewController.h */,
+				6033425F163238E700DC2213 /* MapViewController.m */,
+				60334260163238E700DC2213 /* MapViewController.xib */,
+				6033427316323A4200DC2213 /* FavoritesViewController.h */,
+				6033427416323A4200DC2213 /* FavoritesViewController.m */,
+				6033427516323A4200DC2213 /* FavoritesViewController.xib */,
 				E0D3DC1B1631E7EF0008A612 /* PlacesModelViewController.h */,
 				E0D3DC1C1631E7F00008A612 /* PlacesModelViewController.m */,
 				60EBE34116293EE00052B514 /* rover3.xcdatamodeld */,
@@ -228,6 +272,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				60EBE33A16293EE00052B514 /* InfoPlist.strings in Resources */,
+				60334262163238E700DC2213 /* MapViewController.xib in Resources */,
+				6033427216323A2300DC2213 /* ListViewController.xib in Resources */,
+				6033427716323A4200DC2213 /* FavoritesViewController.xib in Resources */,
+				6033427C16323B5400DC2213 /* groupIcon.png in Resources */,
+				6033427D16323B5400DC2213 /* macbookIcon.png in Resources */,
+				6033427E16323B5400DC2213 /* mapIcon.png in Resources */,
+				6033427F16323B5400DC2213 /* starIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +305,9 @@
 				E0D3DC131631D4B90008A612 /* SBJsonUTF8Stream.m in Sources */,
 				E0D3DC141631D4B90008A612 /* SBJsonWriter.m in Sources */,
 				E0D3DC1D1631E7F00008A612 /* PlacesModelViewController.m in Sources */,
+				60334261163238E700DC2213 /* MapViewController.m in Sources */,
+				6033427116323A2300DC2213 /* ListViewController.m in Sources */,
+				6033427616323A4200DC2213 /* FavoritesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

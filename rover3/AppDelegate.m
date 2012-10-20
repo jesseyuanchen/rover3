@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ListViewController.h"
+#import "MapViewController.h"
+#import "FavoritesViewController.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
@@ -21,8 +24,25 @@
     NSArray *data = [PlacesModelViewController getPlaces:@"food"];
     NSLog(@"Raw json: %@", [[data objectAtIndex:1] valueForKey:@"name"]);
     
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // allocate view controllers
+    UIViewController *listViewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
+    UIViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    UIViewController *favoritesViewController = [[FavoritesViewController alloc] initWithNibName:@"FavoritesViewController" bundle:nil];
+    
+    // allocate navigation controller in order to manage views
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:listViewController];
+    
+    // oddly enough placed here due to navigation logic lol 
+    listViewController.tabBarItem.image = [UIImage imageNamed:@"macbookIcon.png"];
+    mapViewController.tabBarItem.image = [UIImage imageNamed:@"mapIcon.png"];
+    favoritesViewController.tabBarItem.image = [UIImage imageNamed:@"starIcon.png"];
+    
+    // set up tabBarController, init with viewControllers
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[navigation, mapViewController, favoritesViewController];
+    self.window.rootViewController = self.tabBarController;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
