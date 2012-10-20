@@ -26,7 +26,8 @@
         self.tabBarItem.image = [UIImage imageNamed:@"macbookIcon.png"];
         
         // initialize empty results
-        self.results = [NSMutableArray array];
+        //self.results = [NSMutableArray array];
+        
         
     }
     return self;
@@ -36,9 +37,10 @@
 {
     
     UISearchBar *search = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    search.delegate = self;
     self.tableView.tableHeaderView = search;
     
-    NSLog(@"\n%@", [PlacesModelViewController getPlaces:@"food"]);
+    [self searchPlaces:@"food"];
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -75,9 +77,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    //static NSString *CellIdentifier = @"Cell";
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
     // Configure the cell...
     cell.textLabel.text = [[self.results objectAtIndex:indexPath.row] valueForKey:@"name"];
     
@@ -89,6 +92,13 @@
     self.results = [PlacesModelViewController getPlaces:keyword];
     [self.tableView reloadData];
 }
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    [self searchPlaces:searchBar.text];
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.
