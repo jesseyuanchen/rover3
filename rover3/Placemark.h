@@ -13,6 +13,7 @@
 @interface Placemark : NSObject <MKAnnotation>
 - (id) initWithCoordinate: (CLLocationCoordinate2D) coord;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, assign) NSString *title;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSDictionary *data;
 
 @end

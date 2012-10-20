@@ -22,11 +22,9 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.tabBarItem.image = [UIImage imageNamed:@"macbookIcon.png"];
         
-        // initialize empty results
-        //self.results = [NSMutableArray array];
-        
+        self.title = NSLocalizedString(@"Places", @"Places");
+        self.tabBarItem.image = [UIImage imageNamed:@"macbookIcon.png"];        
         
     }
     return self;
@@ -34,6 +32,7 @@
 
 - (void)viewDidLoad
 {
+    
     
     UISearchBar *search = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
     search.delegate = self;
@@ -87,9 +86,12 @@
 }
 
 - (void)searchPlaces:(NSString *)keyword {
-    
-    self.results = [PlacesModelViewController getPlaces:keyword];
+    NSString *str = [keyword stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    PlacesModelViewController *placesVC = [[PlacesModelViewController alloc] init];
+    self.results = [placesVC getPlaces:str];
     [self.tableView reloadData];
+    MapViewController *map = [[[[self.tabBarController viewControllers] objectAtIndex:1] viewControllers] objectAtIndex:0];
+    [map viewDidLoad];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {

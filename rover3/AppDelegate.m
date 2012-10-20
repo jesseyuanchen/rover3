@@ -30,16 +30,23 @@
     UIViewController *favoritesViewController = [[FavoritesViewController alloc] initWithNibName:@"FavoritesViewController" bundle:nil];
     
     // allocate navigation controller in order to manage views
-    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:listViewController];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:listViewController];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:mapViewController];
     
-    // oddly enough placed here due to navigation logic lol 
+    
+    // oddly enough placed here due to navigation logic lol
     listViewController.tabBarItem.image = [UIImage imageNamed:@"macbookIcon.png"];
     mapViewController.tabBarItem.image = [UIImage imageNamed:@"mapIcon.png"];
     favoritesViewController.tabBarItem.image = [UIImage imageNamed:@"starIcon.png"];
     
+    listViewController.tabBarItem.title = @"Places";
+    mapViewController.tabBarItem.title = @"Map";
+    favoritesViewController.tabBarItem.title = @"Favorites";
+    
     // set up tabBarController, init with viewControllers
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[navigation, mapViewController, favoritesViewController];
+    
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects: nav1, nav2, favoritesViewController, nil];
     self.window.rootViewController = self.tabBarController;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

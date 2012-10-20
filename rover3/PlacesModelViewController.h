@@ -11,10 +11,11 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface PlacesModelViewController : UIViewController <CLLocationManagerDelegate> {
-
+ 
 }
 
-+ (NSMutableArray *) getPlaces:(NSString *)keyword;
+@property (nonatomic, strong) CLLocationManager *man;
 
+- (NSMutableArray *) getPlaces:(NSString *)keyword;
 
 @end

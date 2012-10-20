@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "PlacesModelViewController.h"
 #import "DetailViewController.h"
+#import "MapViewController.h"
 
 @interface ListViewController : UITableViewController <UISearchBarDelegate>
 
-@property NSMutableArray *results;
-@property NSString *keyword;
+@property (nonatomic, strong) NSMutableArray *results;
+@property (nonatomic, strong) NSString *keyword;
 
 
 - (void)searchPlaces:(NSString *)keyword;

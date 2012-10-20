@@ -25,33 +25,39 @@
 }
 - (void)viewDidLoad
 {
+    
     // create mapView
     MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
     mapView.delegate = self;
     
+    // get current location - not working
+    // hardcode location instead :(
+    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(42.371343, -71.11682);
+    
     // center coordinate and span
-    MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(42.371343, -71.11682), MKCoordinateSpanMake(0.01, 0.01));
+    MKCoordinateRegion region = MKCoordinateRegionMake(coords, MKCoordinateSpanMake(0.01, 0.01));
     mapView.region = region;
     
-    
-    NSArray *data = [PlacesModelViewController getPlaces:@"food"];
-    for (int i = 1; i < [data count]; i++) {
+    ListViewController *lst = [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
+   
+    NSArray *data = lst.results;
+    for (int i = 0; i < [data count]; i++) {
+        
         NSDictionary *location = [data objectAtIndex:i];
         NSDictionary *geo = [[location objectForKey:@"geometry"] objectForKey:@"location"];
         
         NSNumber *lat = [geo objectForKey:@"lat"];
         NSNumber *lng = [geo objectForKey:@"lng"];
         
-        // convert to double
+        // convert to dou
         double latitude = [lat doubleValue];
         double longitude = [lng doubleValue];
         
         // new pin
         Placemark *pin = [[Placemark alloc] initWithCoordinate: CLLocationCoordinate2DMake(latitude, longitude)];
-        // pin.title = [[data objectAtIndex:i] objectForKey:@"name"];
-        //SLog(@"%@\n", [[data objectAtIndex:i] objectForKey:@"name"]);
         pin.title = [NSString stringWithFormat:@"%@", [[data objectAtIndex:i] objectForKey:@"name"]];
-        //pin.title = @"Work in Progress";
+        pin.data = [data objectAtIndex:i];
+        
         [mapView addAnnotation:pin];
         
     }
@@ -68,25 +74,18 @@
     pinView.canShowCallout = YES;
     UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     [rightButton setTitle:annotation.title forState:UIControlStateNormal];
-    [rightButton addTarget:self 
-                    action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
     pinView.rightCalloutAccessoryView = rightButton;
     return pinView;
-}
-
-- (void)showDetails:(id)sender
-{
-    NSLog(@"hi");
-    DetailViewController *details = [[DetailViewController alloc] init];
-    details.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:details animated:YES completion:^{}];
-    //[self.navigationController pushViewController:details animated:YES];
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view 
 calloutAccessoryControlTapped:(UIControl *)control
 {
-
+    Placemark *pin = view.annotation;
+    DetailViewController *detailView = [[DetailViewController alloc] init];
+    detailView.data = pin.data;
+    detailView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self.navigationController pushViewController:detailView animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

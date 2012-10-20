@@ -25,7 +25,25 @@
 
 - (void)viewDidLoad
 {
-     NSLog(@"%@", [self.data objectForKey:@"name"]);
+    
+    UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 25)];
+    UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 300, 50)];
+    UILabel *rating = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 25)];
+    
+    name.text = [self.data objectForKey:@"name"];
+    address.text = [NSString stringWithFormat:@"Address: %@", [self.data objectForKey:@"vicinity"]];
+    rating.text = [NSString stringWithFormat:@"Rating: %@", [self.data objectForKey:@"rating"]];
+    
+    name.font = [name.font fontWithSize:25];
+    name.textAlignment = NSTextAlignmentCenter;
+    address.textAlignment = NSTextAlignmentCenter;
+    address.numberOfLines = 0;
+    address.lineBreakMode = NSLineBreakByWordWrapping;
+    rating.textAlignment = NSTextAlignmentCenter;
+    
+    [self.view addSubview:name];
+    [self.view addSubview:address];
+    [self.view addSubview:rating];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
