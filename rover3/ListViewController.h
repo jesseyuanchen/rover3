@@ -11,11 +11,15 @@
 #import "DetailViewController.h"
 #import "MapViewController.h"
 
-@interface ListViewController : UITableViewController <UISearchBarDelegate>
+@interface ListViewController : UITableViewController <UISearchBarDelegate, CLLocationManagerDelegate> {
+    CLLocationManager *man;
+    
+}
+
 
 @property (nonatomic, strong) NSMutableArray *results;
 @property (nonatomic, strong) NSString *keyword;
-
+@property (nonatomic, strong) CLLocation *currentLocation;
 
 - (void)searchPlaces:(NSString *)keyword;
 

@@ -30,15 +30,28 @@
     MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
     mapView.delegate = self;
     
+    
+    ListViewController *lst = [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
+    
+    float latitude, longitude;
+    if (lst.currentLocation == nil) {
+        latitude = 42.369967;
+        longitude = -71.117572;
+    }
+    else {
+        latitude = [lst.currentLocation coordinate].latitude;
+        longitude = [lst.currentLocation coordinate].longitude;
+    }
+
+    
     // get current location - not working
     // hardcode location instead :(
-    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(42.371343, -71.11682);
+    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(latitude, longitude);
     
     // center coordinate and span
     MKCoordinateRegion region = MKCoordinateRegionMake(coords, MKCoordinateSpanMake(0.01, 0.01));
     mapView.region = region;
     
-    ListViewController *lst = [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
    
     NSArray *data = lst.results;
     for (int i = 0; i < [data count]; i++) {
